@@ -1,8 +1,8 @@
 SELECT * FROM payment WHERE amount >= 500;
 
-SELECT * FROM STUDENT WHERE CURDATE() > DADEDD(year, 20, birthday);
+SELECT * FROM STUDENT WHERE CURDATE() > DATEADD(year, 20, birthday);
 
-SELECT * FROM student WHERE groupnumber = 10 AND CURDATE() < DADEDD(year, 20, birthday);
+SELECT * FROM student WHERE groupnumber = 10 AND CURDATE() < DATEADD(year, 20, birthday);
 
 SELECT * FROM student WHERE name LIKE('Mike %') OR groupnumber IN (4, 5, 6);
 

@@ -1,20 +1,9 @@
-SELECT * FROM mark AS m
-WHERE m.mark > 6
-ORDER BY m.mark DESC;
+SELECT * FROM mark WHERE mark > 6 ORDER BY mark DESC;
 
-SELECT * FROM payment
-WHERE amount < 300.0
-ORDER BY amount;
+SELECT * FROM payment WHERE amount < 300 ORDER BY amount ASC;
 
-SELECT * FROM paymenttype
-ORDER BY name;
+SELECT * FROM paymenttype ORDER BY name ASC;
 
-SELECT * FROM student
-ORDER BY name DESC;
+SELECT * FROM student ORDER BY name DESC;
 
-SELECT DISTINCT s.*
-FROM student AS s
-JOIN payment AS p
-ON s.id = p.student_id
-WHERE p.amount > 1000.0
-ORDER BY s.birthday;
+SELECT DISTINCT s.* FROM student AS s JOIN payment AS p ON s.id = p.student_id WHERE p.amount > 1000.0 ORDER BY s.birthday ASC;
