@@ -10,11 +10,7 @@ JOIN subject AS s
 ON m.subject_id = s.id
 WHERE s.name = 'Art';
 
-SELECT DISTINCT s.*
-FROM student AS s
-JOIN payment AS p ON s.id = p.student_id
-JOIN paymenttype AS pt ON p.type_id = pt.id
-WHERE pt.name = 'WEEKLY';
+SELECT DISTINCT s.* FROM student AS s JOIN payment AS p ON s.id = p.student_id JOIN paymenttype AS pt ON p.type_id = pt.id WHERE pt.name = 'WEEKLY';
 
 SELECT DISTINCT st.*
 FROM student AS st

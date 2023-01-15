@@ -1,29 +1,29 @@
-CREATE TABLE University.Student(
+CREATE TABLE student(
     id BIGINT PRIMARY KEY,
     name VARCHAR(255),
     birthday DATE,
-    group INT
+    "group" INT
 );
-CREATE TABLE University.Subject(
+CREATE TABLE subject(
     id BIGINT PRIMARY KEY,
     name VARCHAR(255),
     description VARCHAR(255),
     grade INT
 );
-CREATE TABLE University.PaymentType(
+CREATE TABLE paymenttype(
     id BIGINT PRIMARY KEY,
     name VARCHAR(255)
 );
-CREATE TABLE University.Payment(
+CREATE TABLE payment(
     id BIGINT PRIMARY KEY,
-    type_id BIGINT REFERENCES PaymentType(id),
+    type_id BIGINT REFERENCES paymenttype(id),
     amount DECIMAL,
-    student_id BIGINT REFERENCES Student(id),
+    student_id BIGINT REFERENCES student(id),
     payment_date TIMESTAMP
 );
-CREATE TABLE University.mark(
+CREATE TABLE mark(
     id BIGINT PRIMARY KEY,
-    student_id BIGINT REFERENCES Student(id),
-    subject_id BIGINT REFERENCES Subject(id),
+    student_id BIGINT REFERENCES student(id),
+    subject_id BIGINT REFERENCES subject(id),
     mark INT
 );
