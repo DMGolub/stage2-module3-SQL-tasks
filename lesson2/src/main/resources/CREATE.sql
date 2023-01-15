@@ -32,7 +32,7 @@ CREATE TABLE paymenttype
 
 CREATE TABLE payment
 (
-    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL NOT NULL PRIMARY KEY,
     type_id BIGINT NOT NULL,
     amount decimal NOT NULL,
     payment_date TIMESTAMP  NOT NULL,
@@ -40,4 +40,3 @@ CREATE TABLE payment
     foreign key (type_id) references paymenttype(id),
     foreign key (student_id) references student(id)
 );
-
