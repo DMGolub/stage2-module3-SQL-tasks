@@ -27,18 +27,12 @@ INSERT INTO paymenttype(name) VALUES('DAILY');
 INSERT INTO paymenttype(name) VALUES('WEEKLY');
 INSERT INTO paymenttype(name) VALUES('MONTHLY');
 
-INSERT INTO payment(type_id, amount, payment_date, student_id)
-VALUES(2, 100, '2023-01-10 12:00:00', 1);
-INSERT INTO payment(type_id, amount, payment_date, student_id)
-VALUES(3, 200, '2023-01-10 12:00:00', 4);
-INSERT INTO payment(type_id, amount, payment_date, student_id)
-VALUES(2, 300, '2023-01-10 12:00:00', 7);
-INSERT INTO payment(type_id, amount, payment_date, student_id)
-VALUES(1, 150, '2023-01-10 12:00:00', 5);
-INSERT INTO payment(type_id, amount, payment_date, student_id)
-VALUES(3, 50, '2023-01-10 12:00:00', 8);
-INSERT INTO payment(type_id, amount, payment_date, student_id)
-VALUES(1, 75, '2023-01-10 12:00:00', 9);
+INSERT INTO payment(type_id, amount, payment_date, student_id) VALUES(2, 100, '2023-01-10 12:00:00', 1);
+INSERT INTO payment(type_id, amount, payment_date, student_id) VALUES(3, 200, '2023-01-10 12:00:00', 4);
+INSERT INTO payment(type_id, amount, payment_date, student_id) VALUES(2, 300, '2023-01-10 12:00:00', 7);
+INSERT INTO payment(type_id, amount, payment_date, student_id) VALUES(1, 150, '2023-01-10 12:00:00', 5);
+INSERT INTO payment(type_id, amount, payment_date, student_id) VALUES(3, 50, '2023-01-10 12:00:00', 8);
+INSERT INTO payment(type_id, amount, payment_date, student_id) VALUES(1, 75, '2023-01-10 12:00:00', 9);
 
 INSERT INTO mark(student_id, subject_id, mark) VALUES(2, 1, 8);
 INSERT INTO mark(student_id, subject_id, mark) VALUES(4, 4, 5);
